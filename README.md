@@ -41,6 +41,7 @@ public_ingress_cidr      = "1.2.3.4/32"
 - note the IP addressed from the output `private_vm_ip_address` and `public_vm_ip_address` or display them by running `terraform output`
 - connect to the public VM by running `ssh -i <path to your local private key .pem file> ec2-user@<public_vm_ip_address>` in your terminal eg `ssh -i ~/.ssh/aws.pem ec2-user@1.2.3.4`
 - connect to the private VM by running `ssh -i ~/.ssh/<var.name / var.ssh_key_name>.pem ec2-user@<private_vm_ip_address>` on the public VM after you have connected to it, eg `ssh -i ~/.ssh/test-vpc.pem ec2-user@1.2.3.4`
+- in order to remove the resources, run `terraform apply -destroy`
 
 # Updates
 - run `terraform fmt` before pushing changes
